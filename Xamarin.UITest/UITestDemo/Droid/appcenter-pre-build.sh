@@ -6,7 +6,14 @@ echo "I execute after your repo is cloned and dependencies are restored; but bef
 
 echo "Documentation: https://docs.microsoft.com/en-us/appcenter/build/custom/scripts/#pre-build"
 
+echo "checking mono before install --version"
+mono --version
+
+echo "installing mono 5.18.1.28"
 wget https://download.visualstudio.microsoft.com/download/pr/d709da85-c472-437d-9e3d-34d0aece1f1d/1795624d8fe42827f89625fd8553d79b/monoframework-mdk-5.18.1.28.macos10.xamarin.universal.pkg
 sudo installer -pkg "monoframework-mdk-5.18.1.28.macos10.xamarin.universal.pkg" -target /
+
+echo "checking mono after install --version"
+mono --version
 
 echo "end pre-build script"
