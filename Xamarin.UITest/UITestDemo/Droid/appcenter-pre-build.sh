@@ -16,4 +16,18 @@ sudo installer -pkg "monoframework-mdk-5.18.1.28.macos10.xamarin.universal.pkg" 
 echo "checking mono after install --version"
 mono --version
 
+
+echo "checking dotnet before install --version"
+dotnet --version
+
+DOTNET_INSTALL_SCRIPT="https://dot.net/v1/dotnet-install.sh"
+curl -s -o "dotnet-install.sh" "$DOTNET_INSTALL_SCRIPT"
+chmod +x ./dotnet-install.sh
+
+# Mono 5.1.18.28 supports 2.2.300/2.1.700
+./dotnet-install.sh --version 2.2.300 -NoPath
+
+echo "checking dotnet before install --version"
+dotnet --version
+
 echo "end pre-build script"
