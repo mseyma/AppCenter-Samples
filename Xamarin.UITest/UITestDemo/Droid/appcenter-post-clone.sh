@@ -7,4 +7,7 @@ echo "Documentation: https://docs.microsoft.com/en-us/appcenter/build/custom/scr
 echo "checking mono --version"
 mono --version
 
+echo "user_defined: $user_defined.test"
+echo "user-defined: $user-defined.test"
+
 echo "end post-clone script"
