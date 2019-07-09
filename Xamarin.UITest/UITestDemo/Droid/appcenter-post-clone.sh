@@ -19,4 +19,6 @@ echo "USER-DEFINED.TEST: $USER-DEFINED.TEST"
 echo "user-defined_TEST: $user-defined_TEST"
 echo "user-defined.TEST: $user-defined.TEST"
 
+echo "TEST: $TEST"
+
 echo "end post-clone script"
